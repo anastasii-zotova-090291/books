@@ -1,0 +1,89 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(39 151 28 / 7%);
+}
+h1 {
+    font-size: 70px;
+    font-weight: 700;
+    max-width: 1300px;
+    margin: 40px auto;
+    color: #707c6d;
+}
+.container-books {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.books-container {
+    margin: 10px;
+    border: 1px solid #80808085;
+    background-color: #ece3e391;
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.book-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-block {
+    width: 150px;
+    height: 200px;
+    background-size: cover;
+}
+.name-books {
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
+    color: #3836369e
+}
+.year-books {
+    color: grey;
+    font-size: 15px;
+    padding-top: 5px;
+}
+.authors-books {
+    color: #455245ab;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 22px;
+    text-align: center;
+    background: #5895353b;
+    font-size: 13px;
+    font-weight: 600;
+}
+.buttons {
+    display: flex;
+    appearance: none;
+
+}
+.button-block {
+    padding: 20px;
+    width: 50%;
+    font-size: 15px;
+    font-weight: 600;
+    color: #6f6666;
+    background-color:#4fae754d;
+    cursor: pointer;
+    border: 1px solid #80808052;
+    transition: color 500ms linear;
+}
+.button-block:hover {
+    color:#416332ba;
+    background-color: #94c3517d;
+}
