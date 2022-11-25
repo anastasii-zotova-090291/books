@@ -6,7 +6,6 @@
         <title>bookshelf</title>
         <link rel="stylesheet" type="text/css" href="reset.css">
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <link rel="stylesheet" href="icons/css/all.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;
@@ -14,9 +13,29 @@
     </head>
     <body>
         <h1 id="title">Книжная полка</h1>
-            <div class="container-books" id="container-books">
-                
+            <div class="blockButton">
+                <button id="btnCheck">Добавить книгу</button>
+                <div class="containerBtn" id="myContainer">
+                    <div class="fillForm" id="fillForm">
+                        <label class="nameForm">Название книги</label>
+                        <input id="nameBook"/>
+                    </div>
+                    <div class="fillForm" id="fillForm">
+                        <label class="nameForm">Автор книги</label>
+                        <input id="authorsBook"/>
+                    </div>
+                    <div class="fillForm" id="fillForm">
+                        <label class="nameForm">Год издания книги</label>
+                        <input id="yearBook"/>
+                    </div>
+                    <div class="fillForm" id="fillForm">
+                        <label class="nameForm">Ссылка на изображение</label>
+                        <input id="linkBook"/>
+                    </div>
+                    <button id="btnSave">Сохранить</button>
+                </div>
             </div>
+        <div class="container-books" id="container-books"></div>
         <script src="script.js"></script>
     </body>
 </html>

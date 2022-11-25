@@ -13,11 +13,11 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
     max-width: 1300px;
     margin: 0 auto;
 }
 .books-container {
-    margin: 10px;
     border: 1px solid #80808085;
     background-color: #ece3e391;
     width: 300px;
@@ -27,7 +27,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    margin-bottom: 20px;
 }
 .container {
     display: flex;
@@ -86,4 +86,60 @@ h1 {
 .button-block:hover {
     color:#416332ba;
     background-color: #94c3517d;
+}
+.blockButton {
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+#btnCheck {
+    background-color: #4fae754d;
+    width: 260px;
+    margin: 10px 10px 20px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color:#6f6666;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #80808052;
+    white-space: nowrap;
+}
+.containerBtn {
+    display: none;
+    flex-wrap: wrap;
+
+}
+.fillForm {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-right: 10px;
+}
+.nameForm {
+    font-size: 14px;
+    font-weight: 600;
+    color: #357157a6;
+    padding: 5px;
+}
+input {
+    border-radius: 5px;
+    border: 1px solid #D6D3D1;
+    
+    outline: none;
+    cursor: pointer;
+    padding: 6px;
+    font-size: 18px;
+    color: grey;
+}
+#btnSave {
+    background-color: #cbe3eca3;
+    border-radius: 5px;
+    border: 1px solid #D6D3D1;
+    color: grey;
+    font-size: 15px;
+    padding: 10px 20px;
+    width: 150px;
+    margin-top: 10px;
 }
