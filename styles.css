@@ -13,21 +13,22 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
     max-width: 1300px;
     margin: 0 auto;
 }
 .books-container {
     border: 1px solid #80808085;
     background-color: #ece3e391;
-    width: 300px;
+    max-width: 305px;
     height: 450px;
     border-radius: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    flex-grow: 1;
 }
 .container {
     display: flex;
@@ -89,7 +90,7 @@ h1 {
 }
 .blockButton {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-end;
     max-width: 1300px;
     margin: auto;
     padding-bottom: 50px;
@@ -97,7 +98,7 @@ h1 {
 #btnCheck {
     background-color: #4fae754d;
     width: 260px;
-    margin: 10px 10px 20px 0;
+    margin-right: 10px;
     padding: 10px 15px;
     border-radius: 5px;
     color:#6f6666;
@@ -108,14 +109,44 @@ h1 {
 }
 .containerBtn {
     display: none;
-    flex-wrap: wrap;
-
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.372);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 .fillForm {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     margin-right: 10px;
+    background-color: white;
+    padding: 30px;
+    position:relative;
+    width: 400px;
+    border-radius: 10px;
+}
+.titleForm {
+    font-size: 20px;
+    font-weight: 600;
+    color:rgb(71 156 135 / 79%);
+    padding: 20px;
+}
+#close-modal-button {
+    background-color: transparent;
+    border: none;
+    width: 15px;
+    position: absolute;
+    top: 13px;
+    right: 30px
+}
+.close-icon {
+    height: 10px;
+    width: 10px;
+    -webkit-filter: invert(55%);
 }
 .nameForm {
     font-size: 14px;

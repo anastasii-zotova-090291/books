@@ -1,4 +1,4 @@
-const books = [
+let books = [
     {
       id: 1,
       title: 'Psychology of influence. Convince, Influence, Protect',
@@ -32,24 +32,25 @@ const books = [
       'https://images-na.ssl-images-amazon.com/images/I/51WD-F3GobL._SX379_BO1,204,203,200_.jpg'
     }
     ]
-    
-    let isOpen = false
   
     
     const containerBtn = document.getElementById("myContainer")
 
     const myButton = document.getElementById("btnCheck")
-   function myContainer() {
 
-      if (isOpen) {
+    const closeModalButton = document.getElementById("close-modal-button")
+
+
+   function closeModal() {
         containerBtn.style.display = "none"
-        isOpen = false
-      } else {
+   }
+
+   function openModal() {
         containerBtn.style.display = "flex"
-        isOpen = true
-      }
-    }
-    myButton.addEventListener('click', myContainer)
+   }
+    
+    myButton.addEventListener('click', openModal)
+    closeModalButton.addEventListener('click', closeModal)
 
     
     const container = document.getElementById("container-books")
@@ -87,13 +88,21 @@ const books = [
       const bookIndex = books.indexOf(book)
       books.splice(bookIndex, 1)
       renderBooks()
+
+      saveToLocalStorage()
     }
+
 
     function clearForm() {
       document.getElementById('nameBook').value = ""
       document.getElementById('linkBook').value = ""
       document.getElementById('yearBook').value = ""
       document.getElementById('authorsBook').value = ""
+    }
+    
+    function saveToLocalStorage() {
+      const booksJSON = JSON.stringify(books)
+      localStorage.setItem('books', booksJSON)
     }
 
     function btnSave() {
@@ -111,10 +120,17 @@ const books = [
       books.push(book)
       renderBooks()
       clearForm()
-     
+      closeModal()
+      saveToLocalStorage()
     }
-
-    renderBooks()
 
     const myButtonSave = document.getElementById("btnSave")
     myButtonSave.addEventListener('click', btnSave)
+
+    const booksJSON = localStorage.getItem('books')
+
+    if (booksJSON) {
+      books = JSON.parse(booksJSON)
+    }
+
+    renderBooks()
