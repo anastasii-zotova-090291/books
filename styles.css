@@ -73,6 +73,13 @@ h1 {
     appearance: none;
 
 }
+.button-block:hover {
+    color:#416332ba;
+    background-color: #94c3517d;
+}
+.button-block:active {
+    background-color: #416332ba;
+}
 .button-block {
     padding: 20px;
     width: 50%;
@@ -82,11 +89,7 @@ h1 {
     background-color:#4fae754d;
     cursor: pointer;
     border: 1px solid #80808052;
-    transition: color 500ms linear;
-}
-.button-block:hover {
-    color:#416332ba;
-    background-color: #94c3517d;
+    transition: linear 500ms;
 }
 .blockButton {
     display: flex;
@@ -94,6 +97,12 @@ h1 {
     max-width: 1300px;
     margin: auto;
     padding-bottom: 50px;
+}
+#btnChek:hover {
+    background-color: #42a97ca6;
+}
+#btnChek:active {
+    background-color: #368e6e9e;
 }
 #btnCheck {
     background-color: #4fae754d;
@@ -106,6 +115,8 @@ h1 {
     font-weight: 600;
     border: 1px solid #80808052;
     white-space: nowrap;
+    cursor: pointer;
+    transition: linear 500ms;
 }
 .containerBtn {
     display: none;
@@ -173,4 +184,36 @@ input {
     padding: 10px 20px;
     width: 150px;
     margin-top: 10px;
+}
+@media (max-width: 1024px) {
+    h1 {
+        text-align: center;
+    }
+    .blockButton {
+        margin-right: 20px;
+    }
+    .container-books {
+        justify-content: center;
+    }
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 60px;
+    }
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 55px;
+    }
+    .blockButton {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    #btnChek {
+        margin: 0;
+    }
+    .fillForm {
+        width: 270px;
+    }
 }
